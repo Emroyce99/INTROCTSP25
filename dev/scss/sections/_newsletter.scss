@@ -15,8 +15,9 @@
 
         @include helpers.lg{
             display: grid;
-            grid-template-columns: 40% auto;
+            grid-template-columns: 70% auto;
             padding: 60px 16px;
+            gap: 74px;
         }
 
         @include helpers.xl{
@@ -63,6 +64,11 @@
             display: block;
 
             }
+
+        img{
+            margin-top: -120px;
+            }
+    
         }
     }
 }
