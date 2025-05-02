@@ -9,6 +9,21 @@
         background-color: var(--lilyWhite);
         padding: 60px 16px;
 
+        @include helpers.md{
+            padding: 60px 20vw;
+        }
+
+        @include helpers.lg{
+            display: grid;
+            grid-template-columns: 40% auto;
+            padding: 60px 16px;
+        }
+
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
         p{
             margin: 16px 0;
         }
@@ -43,6 +58,11 @@
         aside{
             // week 4 code
             display: none;
+        
+             @include helpers.lg{
+            display: block;
+
+            }
         }
     }
 }
