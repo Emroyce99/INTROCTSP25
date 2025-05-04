@@ -168,6 +168,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  appearance: none;
 }
 
 /**
@@ -253,6 +254,7 @@ textarea {
  */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* Standard property for compatibility */
   outline-offset: -2px; /* 2 */
 }
 
@@ -261,7 +263,8 @@ textarea {
  */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
+  appearance: none;
+    }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -356,11 +359,6 @@ ul li {
 .content-padding {
   padding: 40px 24px;
 }
-@media (min-width: 1200px) {
-  .content-padding {
-    padding: 100px 24px;
-  }
-}
 
 /* =============
     Typography
@@ -426,6 +424,7 @@ input[type=email],
 input[type=password],
 textarea {
   -webkit-appearance: none;
+appearance: none;
 }
 
 /* =============
@@ -444,48 +443,11 @@ textarea {
   background-color: var(--lilyWhite);
   padding: 56px 24px;
 }
-@media (min-width: 1200px) {
-  #hero {
-    padding: 100px 24px;
-  }
-}
-@media (min-width: 768px) {
-  #hero #hero-content-container {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "hero-img" "hero-content";
-  }
-}
-@media (min-width: 1200px) {
-  #hero #hero-content-container {
-    -ms-grid-columns: 40% auto;
-    grid-template-columns: 40% auto;
-        grid-template-areas: "hero-content hero-img";
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 768px) {
-  #hero #hero-content-container section {
-    grid-area: hero-content;
-    padding: 0 15vw;
-  }
-}
-@media (min-width: 992px) {
-  #hero #hero-content-container section {
-    padding: 0 25vw;
-  }
-}
-@media (min-width: 1200px) {
-  #hero #hero-content-container section {
-    padding: 0;
-  }
-}
-#hero #hero-content-container article p {
+#hero section article p {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-#hero #hero-content-container article button {
+#hero section article button {
   background-color: var(--white);
   border: none;
   height: 60px;
@@ -493,47 +455,21 @@ textarea {
   border-radius: 100%;
   margin-left: 30px;
 }
-#hero #hero-content-container #hero-card {
+#hero section #hero-card {
   background-color: var(--snowdrop);
   margin-top: 70px;
   padding: 24px 20px;
   border-radius: 12px;
 }
-#hero #hero-content-container #hero-card h5 {
+#hero section #hero-card h5 {
   color: var(--nightBlue);
   font-weight: 600;
   font-size: 0.875rem;
 }
-#hero #hero-content-container #hero-card p {
+#hero section #hero-card p {
   font-size: 0.875rem;
   font-weight: 600;
 }
-@media (min-width: 768px) {
-  #hero aside {
-    grid-area: hero-img;
-  }
-}
-@media (min-width: 768px) {
-  #hero #hero-content-container section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #hero aside {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-}
-@media (min-width: 1200px) {
-  #hero #hero-content-container section {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  #hero aside {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-}
-
 /* =============
     packages
 ============= */
@@ -565,15 +501,6 @@ textarea {
   padding: 13px 18px;
   border-radius: 8px;
 }
-@media (min-width: 768px) {
-  #packages #package-card-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "card-1 card-1 card-2 card-2" ". card-3 card-3 .";
-  }
-}
 #packages #package-card-container .package-card {
   background-color: var(--ghost);
   border: 1px solid var(--white);
@@ -602,38 +529,6 @@ textarea {
 }
 #packages #package-card-container .selected {
   background-color: var(--white);
-}
-@media (min-width: 768px) {
-  #packages #package-card-container #card-1 {
-    grid-area: card-1;
-  }
-}
-@media (min-width: 768px) {
-  #packages #package-card-container #card-2 {
-    grid-area: card-3;
-  }
-}
-@media (min-width: 768px) {
-  #packages #package-card-container #card-3 {
-    grid-area: card-2;
-  }
-}
-@media (min-width: 768px) {
-  #packages #package-card-container #card-1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-  #packages #package-card-container #card-2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-  }
-  #packages #package-card-container #card-3 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-  }
 }
 
 /* =============
